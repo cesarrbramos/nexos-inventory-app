@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Eliminar como:</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="dismiss()"></button>
+</div>
+<div class="modal-body">
+    <div class="col">
+        <div class="form-group">
+            <label for="">Usuario modificador</label>
+            <ngx-select (typed)="search($event)" optionTextField="fullname" [items]="items" [(ngModel)]="selectedUser"></ngx-select>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-danger" (click)="close()">Eliminar</button>
+</div>

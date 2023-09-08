@@ -1,0 +1,18 @@
+<app-table
+  [columns]="[
+    { key: 'id', header: '#' },
+    { key: 'name', header: 'Nombre', sortable: true },
+    { key: 'quantity', header: 'Cantidad', sortable: true },
+    { key: 'createdAt', header: 'Fecha creación', sortable: true },
+    { key: 'createUser.fullname', header: 'Usuario creación', sortable: true },
+    { key: 'updatedAt', header: 'Fecha modificación', sortable: true },
+    { key: 'updateUser.fullname', header: 'Usuario modificación', sortable: true }
+  ]"
+  [data]="products"
+  [total]="total"
+  [(page)]="page"
+  [querySearch]="querySearch"
+  [pageSize]="pageSize"
+  (edit)="edit($event)"
+  (delete)="delete($event)"
+></app-table>
